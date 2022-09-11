@@ -154,13 +154,12 @@ ul {
 }
 .current::after {
   position: absolute;
-  transform: translateY(28px);
 
   display: inline-block;
   content: "";
   width: 100%;
   height: 4px;
-  top: 15px;
+  bottom: -33px;
   left: 0;
   border-radius: 2px;
 
@@ -423,10 +422,8 @@ ul {
   height: 44px;
   border-radius: 50%;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -458,7 +455,7 @@ ul {
   height: 92px;
 
   transition: color 250ms var(--timing-function),
- border-color 250ms var(--timing-function);
+    border-color 250ms var(--timing-function);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -554,7 +551,7 @@ ul {
   border-radius: 50%;
 
   transition: color 250ms var(--timing-function),
-  background-color 250ms var(--timing-function);
+    background-color 250ms var(--timing-function);
 }
 .social-link:hover,
 .social-link:focus {
@@ -661,8 +658,8 @@ ul {
   border: none;
 
   transition: color 250ms var(--timing-function),
- background-color 250ms var(--timing-function),
- box-shadow 250ms var(--timing-function);
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -720,7 +717,8 @@ ul {
   transform: translateY(100%);
   transition: transform 250ms var(--timing-function);
 }
-.project-thumb:hover .projects-overlay {
+.projects-item:hover .projects-overlay,
+.projects-item:focus .projects-overlay {
   transform: translateY(0);
 }
 .overlay-desc {
